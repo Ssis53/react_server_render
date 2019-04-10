@@ -23,4 +23,14 @@
 服务器更新流程：
 ![热更新服务器更新流程](./imgs/change.png)
 
+----
+
+###  路由配置
+
+**前端路由正常配置（用BrowserRouter包裹路由即可 ）**
+
+**后端路由配置在ReactDOMServer.renderToString中。（用StaticRouter包裹路由，需传入一个location，为当前请求的req.url。这样需要展示的组件在服务端渲染时就已经预加载解析完毕）**
+
+*注意，因为浏览器路径的切换，需要保证express的处理请求的handle函数始终都能匹配上。（相当于还是根据路径不同切换组件，只不过通过StaticRouter在后端预加载了组件）需要把对应的handle函数的匹配路径从'/'改成'\*'*
+
 

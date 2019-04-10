@@ -1,10 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Footer.css';
 
 const Footer = (props) => (
   <React.Fragment>
-    <h2>
+    <div className="two">
       Footer！
-    </h2>
+    </div>
+    <div>
+      <span>
+        <Link to="/">Home</Link>
+      </span>
+      <span>
+        <Link to="/login">Login</Link>
+      </span>
+    </div>
   </React.Fragment>
 )
 
