@@ -3,15 +3,10 @@ const nodemon = require('gulp-nodemon');
 const bs = require('browser-sync').create();
 const path = require('path');
 const ROOT = path.resolve(__dirname);
-// const dirPath = path.join(ROOT, 'public');
+const webpack = require('webpack-stream');
 
 gulp.task('start',['browser-sync'], function() {
-  gulp.watch(['./public/**', './views/**', './routes/**'], ['bs-delay']);
-});
-
-gulp.task('bs-delay', function() {
-  // nodemon.emit('restart');
-  bs.reload();
+  gulp.watch(['./public/**', './views/**', './routes/**'], ['re-load']);
 });
 
 gulp.task('browser-sync', ['nodemon'], function() {
@@ -21,11 +16,16 @@ gulp.task('browser-sync', ['nodemon'], function() {
   });
 });
 
-gulp.task('nodemon', function(cb) {
+gulp.task('nodemon', ['re-pack'], function(cb) {
   var started = false;
   nodemon({
     script: './bin/www',
-    ext: "js",
+    ext: "js jsx css",
+    ignore: [
+      ".git",
+      ".md",
+      "dist/**"
+    ],
     env: {
       'NODE_ENV': 'development'
     },
@@ -34,11 +34,24 @@ gulp.task('nodemon', function(cb) {
     ]
   }).on('start', function() {
     if(!started) {
-      console.log('!!!nodemon first start!!!')
+      console.log('**************nodemon first start****************')
       cb();
       started = true;
     }
   }).on('restart', function() {
-    console.log('!!!!restart!!!!')
+    console.log('****************nodemon restart*****************')
   });
+});
+
+
+
+
+gulp.task('re-load', ['re-pack'], function() {
+  bs.reload();
+});
+
+gulp.task('re-pack', function() {
+  return gulp.src(path.join(ROOT, '/public/javascripts/reactApp/index.js'))
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest('dist/'));
 });

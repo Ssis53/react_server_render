@@ -7,6 +7,7 @@ import App from '../public/javascripts/reactApp/src/App'
 /* GET home page. */
 router.get('/', function(req, res, next) {
   let body = ReactDOMServer.renderToString(<App />);
+  
   res.render('index', { 
     body: body
    });
