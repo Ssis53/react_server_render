@@ -25437,7 +25437,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(21)(false);
 // Module
-exports.push([module.i, "h1 {\r\n  background-color: #017e33;\r\n}", ""]);
+exports.push([module.i, "h1 {\r\n  background-color: #017e33;\r\n  font-size: 14px;\r\n}", ""]);
 
 
 
