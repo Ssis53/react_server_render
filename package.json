@@ -1,6 +1,6 @@
 {
-  "name": "my-server",
-  "version": "0.0.0",
+  "name": "react_server_render",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "webpack && node ./bin/www",

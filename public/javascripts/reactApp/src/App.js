@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.count = 1;
+    this.count = 53;
     console.log('constructor')
   }
 
