@@ -314,7 +314,7 @@ eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nva
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/_react@16.8.6@react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Footer = function Footer(props) {\n  return _react2.default.createElement(\n    'div',\n    null,\n    'Footer'\n  );\n};\n\nexports.default = Footer;\n\n//# sourceURL=webpack:///./public/javascripts/reactApp/src/components/footer/Footer.js?");
+eval("Object.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/_react@16.8.6@react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Footer = function Footer(props) {\n  return _react2.default.createElement(\n    _react2.default.Fragment,\n    null,\n    _react2.default.createElement(\n      'h2',\n      null,\n      'Footer\\uFF01'\n    )\n  );\n};\n\nexports.default = Footer;\n\n//# sourceURL=webpack:///./public/javascripts/reactApp/src/components/footer/Footer.js?");
 
 /***/ })
 

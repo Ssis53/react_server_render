@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Footer = (props) => (
-  <div>
-    Footer
-  </div>
+  <React.Fragment>
+    <h2>
+      Footer！
+    </h2>
+  </React.Fragment>
 )
 
 export default Footer;
