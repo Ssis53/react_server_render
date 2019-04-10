@@ -15,4 +15,4 @@
 
 **基于gulp实现热更新，gulp.watch监听文件变化然后调用各个任务点。用到的模块有webpack-stream（用于gulp执行webpack重新打包命令）、gulp-nodemon（用于重启node服务器）、browser-sync（用于通知浏览器刷新页面）**
 
-![热更新服务器启动流程图](https://github.com/Ssis53/react_server_render/imgs/default.png "热更新服务器启动流程图")
+![热更新服务器启动流程图](./imgs/default.png)
