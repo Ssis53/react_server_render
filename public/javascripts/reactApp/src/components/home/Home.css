@@ -1,6 +1,9 @@
 .one {
   background-color: #017e33;
   color: #f60;
+  height: 25px;
+  line-height: 25px;
+  font-size: 20px;
 }
 
 .two {

@@ -2,7 +2,16 @@
   "plugins": [
     "transform-decorators-legacy", 
     "transform-remove-strict-mode",
-    "transform-class-properties"
+    "transform-class-properties",
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
   ],
   "presets": [
     "es2015",
